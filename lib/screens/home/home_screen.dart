@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:get/state_manager.dart';
 import 'package:news_event_management/screens/home/home_controller.dart';
 import 'package:news_event_management/screens/news/news_screen.dart';
@@ -64,6 +65,25 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ]),
+          floatingActionButton: SpeedDial(
+            animatedIcon: AnimatedIcons.add_event,
+            backgroundColor: Colors.purpleAccent,
+            overlayColor: Colors.purpleAccent,
+            overlayOpacity: 0.1,
+            curve: Curves.linear,
+            children: [
+              SpeedDialChild(
+                child: Icon(Icons.add_task_outlined),
+                label: "Add Task",
+                onTap: () {},
+              ),
+              SpeedDialChild(
+                child: Icon(Icons.note_add_outlined),
+                label: "Add Note",
+                onTap: () {},
+              ),
+            ],
+          ),
         ),
       );
     });
