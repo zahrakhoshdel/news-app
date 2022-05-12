@@ -28,12 +28,17 @@ class NewsCard extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
-                  width: double.infinity,
-                  height: size.height * 0.25,
-                  child: Image.network(
-                    news.articles![index].urlImage.toString(),
-                    fit: BoxFit.fill,
-                  )),
+                width: double.infinity,
+                height: size.height * 0.25,
+                child: news.articles![index].urlImage != null
+                    ? Image.network(
+                        news.articles![index].urlImage.toString(),
+                        fit: BoxFit.fill,
+                      )
+                    : Image.asset(
+                        'assets/images/news_default.png',
+                      ),
+              ),
               SizedBox(
                 height: size.height * 0.01,
               ),
