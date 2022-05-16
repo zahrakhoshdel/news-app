@@ -5,10 +5,11 @@ import 'package:get/get.dart';
 import 'package:news_event_management/constants/app_colors.dart';
 import 'package:news_event_management/models/news_model.dart';
 import 'package:news_event_management/screens/news/news_api_config.dart';
+
 class NewsController extends GetxController {
   final String title = "News Page Title";
 
-   getNews() async {
+  getNews(String category) async {
     try {
       HttpClient client = HttpClient();
       client.badCertificateCallback =
@@ -16,7 +17,7 @@ class NewsController extends GetxController {
 
       final url = Uri.parse(Config.apiUrl +
           Config.country +
-          Config.categoryUrl +
+          "&category=$category" +
           Config.apiKey);
 
       HttpClientRequest request = await client.getUrl(url);

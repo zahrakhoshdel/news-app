@@ -4,7 +4,7 @@ class Config {
   static String apiKey = "&apiKey=9d8db3f17bcc4ee5ba1f523900fa31bf";
   static String apiUrl = "http://newsapi.org/v2/top-headlines";
   static String country = "?country=us";
-  static String categoryUrl = "&business";
+  static String categoryUrl = "&category=business";
 
   static List<Tab> categories = <Tab>[
     const Tab(text: 'business'),
