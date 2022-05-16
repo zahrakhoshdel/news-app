@@ -4,6 +4,7 @@ import 'package:news_event_management/models/news_model.dart';
 import 'package:news_event_management/screens/news/news_api_config.dart';
 import 'package:news_event_management/screens/news/news_controller.dart';
 import 'package:news_event_management/screens/news/widgets/news_card.dart';
+import 'package:news_event_management/screens/news/widgets/news_category_tab.dart';
 import 'package:news_event_management/widgets/screen_title.dart';
 
 class NewsScreen extends StatefulWidget {
@@ -48,6 +49,7 @@ class _NewsScreenState extends State<NewsScreen> with TickerProviderStateMixin {
               padding: EdgeInsets.all(size.width * 0.05),
               child: ScreenTitle(size: size, title: 'News'),
             ),
+            NewsCategoryTab(size: size, tabController: _tabController),
             Expanded(
               child: TabBarView(
                 physics: const BouncingScrollPhysics(),
