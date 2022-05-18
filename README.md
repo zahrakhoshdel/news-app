@@ -2,6 +2,17 @@
 
 A new Flutter project.
 
+# TODO
+
+- Firebase Integration for Authentication and Firestore to store user data.
+
+## Screens
+- News from news API
+- CURD tasks
+- CURD notes
+- settings
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
