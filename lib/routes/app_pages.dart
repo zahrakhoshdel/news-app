@@ -1,4 +1,7 @@
 import 'package:get/get.dart';
+import 'package:news_event_management/screens/authentication/authentication_bindings.dart';
+import 'package:news_event_management/screens/authentication/signin_screen.dart';
+import 'package:news_event_management/screens/authentication/signup_screen.dart';
 import 'package:news_event_management/screens/home/home_binding.dart';
 import 'package:news_event_management/screens/home/home_screen.dart';
 import 'package:news_event_management/screens/news/news_screen.dart';
@@ -14,6 +17,16 @@ class AppPages {
   static const INITIAL = Routes.HOME;
 
   static final routes = [
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => SignInScreen(),
+      binding: AuthenticationBindings(),
+    ),
+    GetPage(
+      name: _Paths.SIGN_UP,
+      page: () => SignUpScreen(),
+      binding: AuthenticationBindings(),
+    ),
     GetPage(
       name: _Paths.HOME,
       page: () => const HomeScreen(),
